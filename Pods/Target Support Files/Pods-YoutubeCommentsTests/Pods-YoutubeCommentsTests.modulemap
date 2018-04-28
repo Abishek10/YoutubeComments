@@ -1,0 +1,6 @@
+framework module Pods_YoutubeCommentsTests {
+  umbrella header "Pods-YoutubeCommentsTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
