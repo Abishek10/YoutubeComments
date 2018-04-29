@@ -8,7 +8,6 @@
 
 import UIKit
 import Foundation
-import MultiAccountOAuth
 import RandomColorSwift
 
 class InfoTableViewCell: UITableViewCell {

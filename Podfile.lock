@@ -1,32 +1,28 @@
 PODS:
-  - Alamofire (4.5.1)
-  - AppAuth (0.9.1)
-  - MultiAccountOAuth (1.0):
-    - Alamofire (~> 4.5.0)
-    - AppAuth (~> 0.9.1)
-    - SwiftyJSON (~> 3.1.4)
+  - Alamofire (4.7.2)
+  - AppAuth (0.92.0)
   - RandomColorSwift (1.0.0)
-  - SwiftyJSON (3.1.4)
+  - SwiftyJSON (4.1.0)
 
 DEPENDENCIES:
-  - MultiAccountOAuth
+  - Alamofire
+  - AppAuth
   - RandomColorSwift
+  - SwiftyJSON
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - Alamofire
     - AppAuth
-    - MultiAccountOAuth
     - RandomColorSwift
     - SwiftyJSON
 
 SPEC CHECKSUMS:
-  Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
-  AppAuth: f7d9a2ce4ffe79a62a8b0c1d0938e88d9809b846
-  MultiAccountOAuth: 2114e6e996317086ee8adc610d643073f27035d3
+  Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  AppAuth: 3f4f1d6d85ad631d0bbf15ffcdc10c447face97a
   RandomColorSwift: 9f85058b721665d52d239ca166a913e083506444
-  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+  SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
 
-PODFILE CHECKSUM: 31e17077a7c2a827c791639ef25d2681902c64e3
+PODFILE CHECKSUM: 1314b36eb52fceb9a03cfb1eb28c1c3618545bc7
 
 COCOAPODS: 1.5.0

@@ -1,13 +1,15 @@
 //
-//  GoogleOauthManager.swift
-//  PickedMail
+//  GoogleUserInstance.swift
+//  YoutubeComments
 //
-//  Created by Kedan Li on 2017/6/17.
-//  Copyright © 2017年 Li Kedan. All rights reserved.
+//  Created by Abishek on 4/29/18.
+//  Copyright © 2018 Abishek. All rights reserved.
 //
+
+import Foundation
 
 public struct GoogleUserInstance {
-
+    
     public var email: String
     public var name: String
     public var familyName: String

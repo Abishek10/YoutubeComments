@@ -1,6 +1,0 @@
-framework module MultiAccountOAuth {
-  umbrella header "MultiAccountOAuth-umbrella.h"
-
-  export *
-  module * { export * }
-}

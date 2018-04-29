@@ -8,16 +8,48 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        loginButton.layer.cornerRadius = 5
+        loginButton.clipsToBounds = true
+        
+        OauthManager.sharedInstance.signinAllUsersSilently {
+            self.tableView.reloadData()
+        }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    @IBAction func login(_ sender: Any) {
+        OauthManager.sharedInstance.signin(controller: self) { (success, user, error) in
+            print(success)
+            print(user?.email)
+            print(user?.accessToken)
+            print(error)
+            self.tableView.reloadData()
+        }
     }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as? InfoTableViewCell {
+            let authUser = OauthManager.sharedInstance.authenticatedUsers[indexPath.row]
+            cell.setDisplay(user: authUser)
+            return cell
+        }
+        return UITableViewCell()
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print(OauthManager.sharedInstance.authenticatedUsers.count)
+        return OauthManager.sharedInstance.authenticatedUsers.count
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 75
+    }
+    
 }
 

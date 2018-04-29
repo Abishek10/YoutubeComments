@@ -1,16 +1,17 @@
 //
-//  APIRequest.swift
-//  Taste
+//  ExternalRequest.swift
+//  YoutubeComments
 //
-//  Created by Li Kedan on 11/22/16.
-//  Copyright © 2016 Li Kedan. All rights reserved.
+//  Created by Abishek on 4/29/18.
+//  Copyright © 2018 Abishek. All rights reserved.
 //
 
+import Foundation
 import Alamofire
 import SwiftyJSON
 
 class ExternalRequest {
-
+    
     class func sendExternalRequest(url: String, method: HTTPMethod, param: [String: AnyObject]?, completion: @escaping (JSON)->()) {
         let manager = Alamofire.SessionManager.default
         manager.session.configuration.timeoutIntervalForRequest = 3
@@ -24,7 +25,7 @@ class ExternalRequest {
             }
         }
     }
-
+    
     class func sendExternalURLRequest(urlRequest: URLRequest, completion: @escaping (JSON)->()) {
         let manager = Alamofire.SessionManager.default
         manager.session.configuration.timeoutIntervalForRequest = 3

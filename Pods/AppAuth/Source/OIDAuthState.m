@@ -34,6 +34,10 @@
  */
 static NSString *const kRefreshTokenKey = @"refreshToken";
 
+/*! @brief Key used to encode the @c needsTokenRefresh property for @c NSSecureCoding.
+ */
+static NSString *const kNeedsTokenRefreshKey = @"needsTokenRefresh";
+
 /*! @brief Key used to encode the @c scope property for @c NSSecureCoding.
  */
 static NSString *const kScopeKey = @"scope";
@@ -243,6 +247,7 @@ static const NSUInteger kExpiryTimeTolerance = 60;
         [aDecoder decodeObjectOfClass:[NSError class] forKey:kAuthorizationErrorKey];
     _scope = [aDecoder decodeObjectOfClass:[NSString class] forKey:kScopeKey];
     _refreshToken = [aDecoder decodeObjectOfClass:[NSString class] forKey:kRefreshTokenKey];
+    _needsTokenRefresh = [aDecoder decodeBoolForKey:kNeedsTokenRefreshKey];
   }
   return self;
 }
@@ -258,6 +263,7 @@ static const NSUInteger kExpiryTimeTolerance = 60;
   }
   [aCoder encodeObject:_scope forKey:kScopeKey];
   [aCoder encodeObject:_refreshToken forKey:kRefreshTokenKey];
+  [aCoder encodeBool:_needsTokenRefresh forKey:kNeedsTokenRefreshKey];
 }
 
 #pragma mark - Private convenience getters
@@ -472,25 +478,25 @@ static const NSUInteger kExpiryTimeTolerance = 60;
     dispatch_async(dispatch_get_main_queue(), ^() {
       // update OIDAuthState based on response
       if (response) {
-          self->_needsTokenRefresh = NO;
+        _needsTokenRefresh = NO;
         [self updateWithTokenResponse:response error:nil];
       } else {
         if (error.domain == OIDOAuthTokenErrorDomain) {
-            self->_needsTokenRefresh = NO;
+          _needsTokenRefresh = NO;
           [self updateWithAuthorizationError:error];
         } else {
-            if ([self->_errorDelegate respondsToSelector:
+          if ([_errorDelegate respondsToSelector:
               @selector(authState:didEncounterTransientError:)]) {
-                [self->_errorDelegate authState:self didEncounterTransientError:error];
+            [_errorDelegate authState:self didEncounterTransientError:error];
           }
         }
       }
 
       // nil the pending queue and process everything that was queued up
       NSArray *actionsToProcess;
-        @synchronized(self->_pendingActionsSyncObject) {
-            actionsToProcess = self->_pendingActions;
-            self->_pendingActions = nil;
+      @synchronized(_pendingActionsSyncObject) {
+        actionsToProcess = _pendingActions;
+        _pendingActions = nil;
       }
       for (OIDAuthStateAction actionToProcess in actionsToProcess) {
         actionToProcess(self.accessToken, self.idToken, error);

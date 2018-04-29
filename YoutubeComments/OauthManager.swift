@@ -1,16 +1,17 @@
 //
-//  GoogleOauthManager.swift
-//  PickedMail
+//  OauthManager.swift
+//  YoutubeComments
 //
-//  Created by Kedan Li on 2017/6/17.
-//  Copyright © 2017年 Li Kedan. All rights reserved.
+//  Created by Abishek on 4/29/18.
+//  Copyright © 2018 Abishek. All rights reserved.
 //
 
+import Foundation
 import AppAuth
 import SwiftyJSON
 
 public class OauthManager: DynamicStorage {
-
+    
     public static let sharedInstance = OauthManager()
     
     public var cliendId = ""
@@ -21,7 +22,7 @@ public class OauthManager: DynamicStorage {
     public var authenticatedUsers = [GoogleUserInstance]()
     
     public var oauthSession: OIDAuthorizationFlowSession?
-
+    
     @objc dynamic var signinUsersRefreshToken = [String: String]()
     
     public func configure(cliendId: String, scope: [String], urlScheme: String, serverCliendId: String?) {

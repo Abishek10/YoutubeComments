@@ -7,8 +7,9 @@ target 'YoutubeComments' do
 
   # Pods for YoutubeComments
   pod 'RandomColorSwift'
-  pod 'MultiAccountOAuth'
-
+  pod 'AppAuth'
+  pod 'Alamofire'
+  pod 'SwiftyJSON'
 
   target 'YoutubeCommentsTests' do
     inherit! :search_paths
