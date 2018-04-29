@@ -1,30 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RfX-sg-dIi">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5Sy-jj-La3">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Multi Account Oauth-->
+        <!--Add Account-->
         <scene sceneID="aMa-uD-CxQ">
             <objects>
-                <viewController title="Multi Account Oauth" id="RfX-sg-dIi" customClass="ViewController" customModule="YoutubeComments" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Add Account" id="RfX-sg-dIi" customClass="ViewController" customModule="YoutubeComments" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qZP-Ma-I1H"/>
                         <viewControllerLayoutGuide type="bottom" id="MnA-0F-0VM"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="uCP-6E-A1b">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zxt-gi-wfy">
-                                <rect key="frame" x="47" y="587" width="280" height="40"/>
+                                <rect key="frame" x="20" y="437" width="280" height="40"/>
                                 <color key="backgroundColor" red="0.3584749699" green="0.5560027957" blue="0.86279857159999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="IAk-Bw-2Nf"/>
@@ -39,18 +40,18 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7yl-g3-8F5">
-                                <rect key="frame" x="20" y="40" width="335" height="527"/>
+                                <rect key="frame" x="20" y="84" width="280" height="332.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" rowHeight="75" id="2Va-LO-tkx" customClass="InfoTableViewCell" customModule="YoutubeComments" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="335" height="75"/>
+                                        <rect key="frame" x="0.0" y="28" width="280" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2Va-LO-tkx" id="YGK-S1-CCl">
-                                            <rect key="frame" x="0.0" y="0.0" width="335" height="75"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="280" height="75"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YbA-JE-Q7C">
-                                                    <rect key="frame" x="0.0" y="0.0" width="335" height="60"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="728" height="60"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bqx-eW-9Jf">
                                                             <rect key="frame" x="5" y="5" width="50" height="50"/>
@@ -59,7 +60,7 @@
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="THe-Ls-Oi7">
-                                                            <rect key="frame" x="70" y="5" width="244" height="23"/>
+                                                            <rect key="frame" x="70" y="5" width="658" height="23"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="23" id="Pam-9z-n2t"/>
                                                             </constraints>
@@ -68,7 +69,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All Inboxes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wpP-6u-odm">
-                                                            <rect key="frame" x="70" y="30" width="244" height="23"/>
+                                                            <rect key="frame" x="70" y="30" width="658" height="23"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="23" id="Fev-i2-wMJ"/>
                                                             </constraints>
@@ -85,8 +86,8 @@
                                                         <constraint firstItem="wpP-6u-odm" firstAttribute="leading" secondItem="THe-Ls-Oi7" secondAttribute="leading" id="XX5-9y-Yfa"/>
                                                         <constraint firstItem="THe-Ls-Oi7" firstAttribute="leading" secondItem="bqx-eW-9Jf" secondAttribute="trailing" constant="15" id="Zha-G1-tVd"/>
                                                         <constraint firstItem="wpP-6u-odm" firstAttribute="top" secondItem="THe-Ls-Oi7" secondAttribute="bottom" constant="2" id="Zjv-qL-n7l"/>
-                                                        <constraint firstAttribute="trailing" secondItem="THe-Ls-Oi7" secondAttribute="trailing" constant="21" id="dMf-wG-QKz"/>
-                                                        <constraint firstAttribute="trailing" secondItem="wpP-6u-odm" secondAttribute="trailing" constant="21" id="nth-BP-KXG"/>
+                                                        <constraint firstAttribute="trailing" secondItem="THe-Ls-Oi7" secondAttribute="trailing" id="dMf-wG-QKz"/>
+                                                        <constraint firstAttribute="trailing" secondItem="wpP-6u-odm" secondAttribute="trailing" id="nth-BP-KXG"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -109,27 +110,111 @@
                                     <outlet property="delegate" destination="RfX-sg-dIi" id="MQF-AJ-xLb"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W5Z-bO-8eo">
+                                <rect key="frame" x="20" y="501" width="280" height="40"/>
+                                <color key="backgroundColor" red="0.61568627450000002" green="0.01176470588" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="KYf-K4-dFL"/>
+                                    <constraint firstAttribute="height" constant="40" id="qmX-OF-VsS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="19"/>
+                                <state key="normal" title="Post Comment">
+                                    <color key="titleColor" red="0.95686274510000002" green="0.95686274510000002" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="comment:" destination="RfX-sg-dIi" eventType="touchUpInside" id="7Tg-w9-GiB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="MnA-0F-0VM" firstAttribute="top" secondItem="zxt-gi-wfy" secondAttribute="bottom" constant="40" id="138-ro-3uF"/>
                             <constraint firstItem="7yl-g3-8F5" firstAttribute="top" secondItem="qZP-Ma-I1H" secondAttribute="bottom" constant="20" id="1yn-9H-DjR"/>
-                            <constraint firstItem="zxt-gi-wfy" firstAttribute="top" secondItem="7yl-g3-8F5" secondAttribute="bottom" constant="20" id="2gy-Uo-bl8"/>
+                            <constraint firstItem="zxt-gi-wfy" firstAttribute="top" secondItem="7yl-g3-8F5" secondAttribute="bottom" multiplier="1.05" id="2gy-Uo-bl8"/>
+                            <constraint firstItem="ekS-Nj-s2E" firstAttribute="bottom" secondItem="W5Z-bO-8eo" secondAttribute="bottom" multiplier="1.05" id="AI2-nF-EGc"/>
+                            <constraint firstItem="W5Z-bO-8eo" firstAttribute="centerX" secondItem="ekS-Nj-s2E" secondAttribute="centerX" id="HOz-VA-7wF"/>
+                            <constraint firstItem="W5Z-bO-8eo" firstAttribute="top" secondItem="zxt-gi-wfy" secondAttribute="bottom" multiplier="1.05" id="KlY-E4-DsR"/>
                             <constraint firstAttribute="trailing" secondItem="7yl-g3-8F5" secondAttribute="trailing" constant="20" id="Oqo-eQ-Jzt"/>
                             <constraint firstItem="7yl-g3-8F5" firstAttribute="leading" secondItem="uCP-6E-A1b" secondAttribute="leading" constant="20" id="TWk-ty-gdQ"/>
                             <constraint firstItem="zxt-gi-wfy" firstAttribute="centerX" secondItem="uCP-6E-A1b" secondAttribute="centerX" id="bXZ-Sv-wwg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ekS-Nj-s2E"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Multi Account Oauth" id="z7c-QB-Ief"/>
+                    <navigationItem key="navigationItem" title="Accounts" id="z7c-QB-Ief"/>
                     <connections>
+                        <outlet property="commentButton" destination="W5Z-bO-8eo" id="iXC-iR-F1W"/>
                         <outlet property="loginButton" destination="zxt-gi-wfy" id="Qh9-9l-wS6"/>
                         <outlet property="tableView" destination="7yl-g3-8F5" id="gZh-Gz-slL"/>
+                        <segue destination="sSQ-bu-luU" kind="show" identifier="Accounts2Comments" id="Qs3-rd-3IN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xpr-1p-DLA" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1004" y="134"/>
+            <point key="canvasLocation" x="2000.625" y="133.09859154929578"/>
+        </scene>
+        <!--Comment-->
+        <scene sceneID="8gB-HO-Jiw">
+            <objects>
+                <viewController title="Comment" id="sSQ-bu-luU" customClass="CommentViewController" customModule="YoutubeComments" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="o61-wT-Xky">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UCC-HJ-tOc">
+                                <rect key="frame" x="20" y="84" width="280" height="148"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ltM-Me-xfG">
+                                <rect key="frame" x="20" y="244" width="280" height="40"/>
+                                <color key="backgroundColor" red="0.61568627450000002" green="0.01176470588" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="ZgS-d0-KcP"/>
+                                    <constraint firstAttribute="width" constant="280" id="j9D-uw-PsQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="19"/>
+                                <state key="normal" title="Post Comment">
+                                    <color key="titleColor" red="0.95686274510000002" green="0.95686274510000002" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="K7P-Vx-b0u" firstAttribute="trailing" secondItem="UCC-HJ-tOc" secondAttribute="trailing" constant="20" id="0xP-Zi-jT2"/>
+                            <constraint firstItem="ltM-Me-xfG" firstAttribute="centerX" secondItem="K7P-Vx-b0u" secondAttribute="centerX" id="5EN-ru-PHV"/>
+                            <constraint firstItem="UCC-HJ-tOc" firstAttribute="leading" secondItem="K7P-Vx-b0u" secondAttribute="leading" constant="20" id="62l-Xi-cec"/>
+                            <constraint firstItem="UCC-HJ-tOc" firstAttribute="top" secondItem="K7P-Vx-b0u" secondAttribute="top" constant="20" id="Gjn-be-G4h"/>
+                            <constraint firstItem="ltM-Me-xfG" firstAttribute="top" secondItem="UCC-HJ-tOc" secondAttribute="bottom" multiplier="1.05" id="YO7-hG-tgF"/>
+                            <constraint firstItem="ltM-Me-xfG" firstAttribute="bottom" secondItem="K7P-Vx-b0u" secondAttribute="bottom" multiplier="0.5" id="icy-ga-a1I"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="K7P-Vx-b0u"/>
+                    </view>
+                    <connections>
+                        <outlet property="comment" destination="UCC-HJ-tOc" id="cIh-Hs-Dht"/>
+                        <outlet property="commentButton" destination="ltM-Me-xfG" id="SFy-V1-65W"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2hm-JK-eYj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2775" y="132.04225352112675"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ySf-KW-sTT">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5Sy-jj-La3" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Hfh-gV-1xc">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="RfX-sg-dIi" kind="relationship" relationship="rootViewController" id="MPQ-V5-FdA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="llD-E9-Qtm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1003.125" y="133.09859154929578"/>
         </scene>
     </scenes>
 </document>
