@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		110E0EC87A54703BB297F87C /* Pods_YoutubeComments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 054857FBDF056AC693E79F6D /* Pods_YoutubeComments.framework */; };
-		78877BE7353238871CF43BCA /* Pods_YoutubeCommentsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F5B017E17B41DCDC4D94BDA /* Pods_YoutubeCommentsUITests.framework */; };
-		D1857CB4F0006A28B0D5226E /* Pods_YoutubeCommentsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4E9CB2987BD4BA2C54E054 /* Pods_YoutubeCommentsTests.framework */; };
+		210334A1EF6616B7A1A4547A /* Pods_YoutubeCommentsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E49C9A5E665D0922C893C99 /* Pods_YoutubeCommentsTests.framework */; };
+		422D64FDBE4808F48863E609 /* Pods_YoutubeComments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A55D161D47C9F56C9BB1854 /* Pods_YoutubeComments.framework */; };
+		BC9A0D956859B84540E62E73 /* Pods_YoutubeCommentsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AD4536E485BB4E31055D8D4 /* Pods_YoutubeCommentsUITests.framework */; };
+		F326920820956B680079E900 /* InfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F326920720956B680079E900 /* InfoTableViewCell.swift */; };
 		F37DE4A720943CEE00B0F25A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37DE4A620943CEE00B0F25A /* AppDelegate.swift */; };
 		F37DE4A920943CEE00B0F25A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37DE4A820943CEE00B0F25A /* ViewController.swift */; };
 		F37DE4AC20943CEE00B0F25A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F37DE4AA20943CEE00B0F25A /* Main.storyboard */; };
@@ -38,15 +39,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		054857FBDF056AC693E79F6D /* Pods_YoutubeComments.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YoutubeComments.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		226E01B5AADCDB492712A2C9 /* Pods-YoutubeComments.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YoutubeComments.release.xcconfig"; path = "Pods/Target Support Files/Pods-YoutubeComments/Pods-YoutubeComments.release.xcconfig"; sourceTree = "<group>"; };
-		2F5B017E17B41DCDC4D94BDA /* Pods_YoutubeCommentsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YoutubeCommentsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3A04A1DC19ECC8F02E4707AB /* Pods-YoutubeComments.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YoutubeComments.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YoutubeComments/Pods-YoutubeComments.debug.xcconfig"; sourceTree = "<group>"; };
-		42FA7907843302712F435A0B /* Pods-YoutubeCommentsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YoutubeCommentsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-YoutubeCommentsUITests/Pods-YoutubeCommentsUITests.release.xcconfig"; sourceTree = "<group>"; };
-		CB4E9CB2987BD4BA2C54E054 /* Pods_YoutubeCommentsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YoutubeCommentsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E094E124A961DD2FA9944C45 /* Pods-YoutubeCommentsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YoutubeCommentsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YoutubeCommentsUITests/Pods-YoutubeCommentsUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		E4A09FA9E2B596DD2DAF1897 /* Pods-YoutubeCommentsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YoutubeCommentsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-YoutubeCommentsTests/Pods-YoutubeCommentsTests.release.xcconfig"; sourceTree = "<group>"; };
-		EBC02CF09EEC1F10928D7805 /* Pods-YoutubeCommentsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YoutubeCommentsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YoutubeCommentsTests/Pods-YoutubeCommentsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		0ADD1B8A5EF447691862C05D /* Pods-YoutubeCommentsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YoutubeCommentsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YoutubeCommentsTests/Pods-YoutubeCommentsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		49B3BAE901348339244FD77C /* Pods-YoutubeCommentsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YoutubeCommentsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-YoutubeCommentsUITests/Pods-YoutubeCommentsUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4A55D161D47C9F56C9BB1854 /* Pods_YoutubeComments.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YoutubeComments.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5AD4536E485BB4E31055D8D4 /* Pods_YoutubeCommentsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YoutubeCommentsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E49C9A5E665D0922C893C99 /* Pods_YoutubeCommentsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YoutubeCommentsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		80DC5F01C4CC21CAC4F1F2DD /* Pods-YoutubeComments.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YoutubeComments.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YoutubeComments/Pods-YoutubeComments.debug.xcconfig"; sourceTree = "<group>"; };
+		A6329D3DBF3CEF233E6507F2 /* Pods-YoutubeCommentsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YoutubeCommentsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-YoutubeCommentsTests/Pods-YoutubeCommentsTests.release.xcconfig"; sourceTree = "<group>"; };
+		D623AB2DF429B272E5CF59D7 /* Pods-YoutubeComments.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YoutubeComments.release.xcconfig"; path = "Pods/Target Support Files/Pods-YoutubeComments/Pods-YoutubeComments.release.xcconfig"; sourceTree = "<group>"; };
+		F326920720956B680079E900 /* InfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTableViewCell.swift; sourceTree = "<group>"; };
 		F37DE4A320943CEE00B0F25A /* YoutubeComments.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YoutubeComments.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F37DE4A620943CEE00B0F25A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F37DE4A820943CEE00B0F25A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -61,6 +62,7 @@
 		F37DE4C520943CF000B0F25A /* YoutubeCommentsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YoutubeCommentsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F37DE4C920943CF000B0F25A /* YoutubeCommentsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeCommentsUITests.swift; sourceTree = "<group>"; };
 		F37DE4CB20943CF000B0F25A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAB640CA9B4948EEEE9D6C87 /* Pods-YoutubeCommentsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YoutubeCommentsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YoutubeCommentsUITests/Pods-YoutubeCommentsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				110E0EC87A54703BB297F87C /* Pods_YoutubeComments.framework in Frameworks */,
+				422D64FDBE4808F48863E609 /* Pods_YoutubeComments.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,7 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D1857CB4F0006A28B0D5226E /* Pods_YoutubeCommentsTests.framework in Frameworks */,
+				210334A1EF6616B7A1A4547A /* Pods_YoutubeCommentsTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,34 +86,34 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				78877BE7353238871CF43BCA /* Pods_YoutubeCommentsUITests.framework in Frameworks */,
+				BC9A0D956859B84540E62E73 /* Pods_YoutubeCommentsUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		958FFBE62A8382793531874E /* Frameworks */ = {
+		7F069047D3602D60B643E641 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				054857FBDF056AC693E79F6D /* Pods_YoutubeComments.framework */,
-				CB4E9CB2987BD4BA2C54E054 /* Pods_YoutubeCommentsTests.framework */,
-				2F5B017E17B41DCDC4D94BDA /* Pods_YoutubeCommentsUITests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		9F30C61732686DAC53791880 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				3A04A1DC19ECC8F02E4707AB /* Pods-YoutubeComments.debug.xcconfig */,
-				226E01B5AADCDB492712A2C9 /* Pods-YoutubeComments.release.xcconfig */,
-				EBC02CF09EEC1F10928D7805 /* Pods-YoutubeCommentsTests.debug.xcconfig */,
-				E4A09FA9E2B596DD2DAF1897 /* Pods-YoutubeCommentsTests.release.xcconfig */,
-				E094E124A961DD2FA9944C45 /* Pods-YoutubeCommentsUITests.debug.xcconfig */,
-				42FA7907843302712F435A0B /* Pods-YoutubeCommentsUITests.release.xcconfig */,
+				80DC5F01C4CC21CAC4F1F2DD /* Pods-YoutubeComments.debug.xcconfig */,
+				D623AB2DF429B272E5CF59D7 /* Pods-YoutubeComments.release.xcconfig */,
+				0ADD1B8A5EF447691862C05D /* Pods-YoutubeCommentsTests.debug.xcconfig */,
+				A6329D3DBF3CEF233E6507F2 /* Pods-YoutubeCommentsTests.release.xcconfig */,
+				FAB640CA9B4948EEEE9D6C87 /* Pods-YoutubeCommentsUITests.debug.xcconfig */,
+				49B3BAE901348339244FD77C /* Pods-YoutubeCommentsUITests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		EBEAC029998A06720B918370 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4A55D161D47C9F56C9BB1854 /* Pods_YoutubeComments.framework */,
+				7E49C9A5E665D0922C893C99 /* Pods_YoutubeCommentsTests.framework */,
+				5AD4536E485BB4E31055D8D4 /* Pods_YoutubeCommentsUITests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		F37DE49A20943CEE00B0F25A = {
@@ -121,8 +123,8 @@
 				F37DE4BD20943CF000B0F25A /* YoutubeCommentsTests */,
 				F37DE4C820943CF000B0F25A /* YoutubeCommentsUITests */,
 				F37DE4A420943CEE00B0F25A /* Products */,
-				9F30C61732686DAC53791880 /* Pods */,
-				958FFBE62A8382793531874E /* Frameworks */,
+				7F069047D3602D60B643E641 /* Pods */,
+				EBEAC029998A06720B918370 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -146,6 +148,7 @@
 				F37DE4B220943CF000B0F25A /* LaunchScreen.storyboard */,
 				F37DE4B520943CF000B0F25A /* Info.plist */,
 				F37DE4AD20943CEE00B0F25A /* YoutubeComments.xcdatamodeld */,
+				F326920720956B680079E900 /* InfoTableViewCell.swift */,
 			);
 			path = YoutubeComments;
 			sourceTree = "<group>";
@@ -175,11 +178,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F37DE4CE20943CF000B0F25A /* Build configuration list for PBXNativeTarget "YoutubeComments" */;
 			buildPhases = (
-				8D4C22C4B9C6875BBAB4931E /* [CP] Check Pods Manifest.lock */,
+				D18B78B93AC53582AC36DD03 /* [CP] Check Pods Manifest.lock */,
 				F37DE49F20943CEE00B0F25A /* Sources */,
 				F37DE4A020943CEE00B0F25A /* Frameworks */,
 				F37DE4A120943CEE00B0F25A /* Resources */,
-				A5C5289479CAC398B30279F2 /* [CP] Embed Pods Frameworks */,
+				9BEBCA5225C413A856A9BAD1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -194,7 +197,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F37DE4D120943CF000B0F25A /* Build configuration list for PBXNativeTarget "YoutubeCommentsTests" */;
 			buildPhases = (
-				0E78A8CF86D779B9FE6AE56F /* [CP] Check Pods Manifest.lock */,
+				4C6E7F12BBDC45FCBF58C141 /* [CP] Check Pods Manifest.lock */,
 				F37DE4B620943CF000B0F25A /* Sources */,
 				F37DE4B720943CF000B0F25A /* Frameworks */,
 				F37DE4B820943CF000B0F25A /* Resources */,
@@ -213,7 +216,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F37DE4D420943CF000B0F25A /* Build configuration list for PBXNativeTarget "YoutubeCommentsUITests" */;
 			buildPhases = (
-				BC24F4A63D3528633982E5E9 /* [CP] Check Pods Manifest.lock */,
+				42503DA0DAF666C971F9FC1A /* [CP] Check Pods Manifest.lock */,
 				F37DE4C120943CF000B0F25A /* Sources */,
 				F37DE4C220943CF000B0F25A /* Frameworks */,
 				F37DE4C320943CF000B0F25A /* Resources */,
@@ -299,67 +302,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0E78A8CF86D779B9FE6AE56F /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-YoutubeCommentsTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8D4C22C4B9C6875BBAB4931E /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-YoutubeComments-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A5C5289479CAC398B30279F2 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-YoutubeComments/Pods-YoutubeComments-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/AppAuth/AppAuth.framework",
-				"${BUILT_PRODUCTS_DIR}/MultiAccountOAuth/MultiAccountOAuth.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AppAuth.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MultiAccountOAuth.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YoutubeComments/Pods-YoutubeComments-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BC24F4A63D3528633982E5E9 /* [CP] Check Pods Manifest.lock */ = {
+		42503DA0DAF666C971F9FC1A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -377,6 +320,68 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		4C6E7F12BBDC45FCBF58C141 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YoutubeCommentsTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9BEBCA5225C413A856A9BAD1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-YoutubeComments/Pods-YoutubeComments-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AppAuth/AppAuth.framework",
+				"${BUILT_PRODUCTS_DIR}/MultiAccountOAuth/MultiAccountOAuth.framework",
+				"${BUILT_PRODUCTS_DIR}/RandomColorSwift/RandomColorSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AppAuth.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MultiAccountOAuth.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RandomColorSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YoutubeComments/Pods-YoutubeComments-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D18B78B93AC53582AC36DD03 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YoutubeComments-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -385,6 +390,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F37DE4A920943CEE00B0F25A /* ViewController.swift in Sources */,
+				F326920820956B680079E900 /* InfoTableViewCell.swift in Sources */,
 				F37DE4A720943CEE00B0F25A /* AppDelegate.swift in Sources */,
 				F37DE4AF20943CEE00B0F25A /* YoutubeComments.xcdatamodeld in Sources */,
 			);
@@ -557,13 +563,17 @@
 		};
 		F37DE4CF20943CF000B0F25A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3A04A1DC19ECC8F02E4707AB /* Pods-YoutubeComments.debug.xcconfig */;
+			baseConfigurationReference = 80DC5F01C4CC21CAC4F1F2DD /* Pods-YoutubeComments.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XB7MJW3L9F;
 				INFOPLIST_FILE = YoutubeComments/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.abishek.YoutubeComments;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -573,13 +583,17 @@
 		};
 		F37DE4D020943CF000B0F25A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 226E01B5AADCDB492712A2C9 /* Pods-YoutubeComments.release.xcconfig */;
+			baseConfigurationReference = D623AB2DF429B272E5CF59D7 /* Pods-YoutubeComments.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XB7MJW3L9F;
 				INFOPLIST_FILE = YoutubeComments/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.abishek.YoutubeComments;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -589,14 +603,18 @@
 		};
 		F37DE4D220943CF000B0F25A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EBC02CF09EEC1F10928D7805 /* Pods-YoutubeCommentsTests.debug.xcconfig */;
+			baseConfigurationReference = 0ADD1B8A5EF447691862C05D /* Pods-YoutubeCommentsTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XB7MJW3L9F;
 				INFOPLIST_FILE = YoutubeCommentsTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.abishek.YoutubeCommentsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -607,14 +625,18 @@
 		};
 		F37DE4D320943CF000B0F25A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E4A09FA9E2B596DD2DAF1897 /* Pods-YoutubeCommentsTests.release.xcconfig */;
+			baseConfigurationReference = A6329D3DBF3CEF233E6507F2 /* Pods-YoutubeCommentsTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XB7MJW3L9F;
 				INFOPLIST_FILE = YoutubeCommentsTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.abishek.YoutubeCommentsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -625,13 +647,17 @@
 		};
 		F37DE4D520943CF000B0F25A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E094E124A961DD2FA9944C45 /* Pods-YoutubeCommentsUITests.debug.xcconfig */;
+			baseConfigurationReference = FAB640CA9B4948EEEE9D6C87 /* Pods-YoutubeCommentsUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XB7MJW3L9F;
 				INFOPLIST_FILE = YoutubeCommentsUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.abishek.YoutubeCommentsUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -642,13 +668,17 @@
 		};
 		F37DE4D620943CF000B0F25A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 42FA7907843302712F435A0B /* Pods-YoutubeCommentsUITests.release.xcconfig */;
+			baseConfigurationReference = 49B3BAE901348339244FD77C /* Pods-YoutubeCommentsUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XB7MJW3L9F;
 				INFOPLIST_FILE = YoutubeCommentsUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.abishek.YoutubeCommentsUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

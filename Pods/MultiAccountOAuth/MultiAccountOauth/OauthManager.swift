@@ -22,7 +22,7 @@ public class OauthManager: DynamicStorage {
     
     public var oauthSession: OIDAuthorizationFlowSession?
 
-    dynamic var signinUsersRefreshToken = [String: String]()
+    @objc dynamic var signinUsersRefreshToken = [String: String]()
     
     public func configure(cliendId: String, scope: [String], urlScheme: String, serverCliendId: String?) {
         self.cliendId = cliendId

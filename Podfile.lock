@@ -5,24 +5,28 @@ PODS:
     - Alamofire (~> 4.5.0)
     - AppAuth (~> 0.9.1)
     - SwiftyJSON (~> 3.1.4)
+  - RandomColorSwift (1.0.0)
   - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
   - MultiAccountOAuth
+  - RandomColorSwift
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - Alamofire
     - AppAuth
     - MultiAccountOAuth
+    - RandomColorSwift
     - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
   AppAuth: f7d9a2ce4ffe79a62a8b0c1d0938e88d9809b846
   MultiAccountOAuth: 2114e6e996317086ee8adc610d643073f27035d3
+  RandomColorSwift: 9f85058b721665d52d239ca166a913e083506444
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: 8d15af3663742340f879b77c1e9a8e4a607e8d0c
+PODFILE CHECKSUM: 31e17077a7c2a827c791639ef25d2681902c64e3
 
 COCOAPODS: 1.5.0
