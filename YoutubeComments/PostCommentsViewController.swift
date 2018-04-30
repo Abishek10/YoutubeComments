@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Alamofire
 
 class PostCommentsViewController: UIViewController {
     
@@ -31,7 +32,28 @@ class PostCommentsViewController: UIViewController {
     }
 
     @IBAction func search(_ sender: Any) {
-    
+        if (searchText.text?.count == 0) {
+            return
+        }
+        
+        let keyword = searchText.text!
+        let maxResults = 5
+        let type = "video"
+        let part = "snippet"
+        
+        let url = URL(string: GlobalConstants.URLS.search)!
+        var get_data: [String: Any] = [String: Any]()
+        
+        get_data["type"] = type
+        get_data["maxResults"] = maxResults
+        get_data["part"] = part
+        get_data["q"] = keyword
+        get_data["key"] = GlobalConstants.API_KEY
+        
+
+        Alamofire.request(url, method: .get, parameters: get_data, encoding: URLEncoding.default, headers: nil).responseJSON { response in
+            
+        }
     }
 
     override func viewDidLayoutSubviews() {

@@ -26,6 +26,7 @@
 		F3AF7C5C20961AA2005E80D1 /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AF7C5B20961AA2005E80D1 /* CommentViewController.swift */; };
 		F3AF7C5E2096AEEC005E80D1 /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AF7C5D2096AEEC005E80D1 /* CommentTableViewCell.swift */; };
 		F3D9C1F82096BC650011C93D /* PostCommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D9C1F72096BC650011C93D /* PostCommentsViewController.swift */; };
+		F3D9C1FA2096C2520011C93D /* GlobalConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D9C1F92096C2520011C93D /* GlobalConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,7 @@
 		F3AF7C5B20961AA2005E80D1 /* CommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
 		F3AF7C5D2096AEEC005E80D1 /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
 		F3D9C1F72096BC650011C93D /* PostCommentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCommentsViewController.swift; sourceTree = "<group>"; };
+		F3D9C1F92096C2520011C93D /* GlobalConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalConstants.swift; sourceTree = "<group>"; };
 		FAB640CA9B4948EEEE9D6C87 /* Pods-YoutubeCommentsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YoutubeCommentsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YoutubeCommentsUITests/Pods-YoutubeCommentsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -170,6 +172,7 @@
 				F3AF7C5B20961AA2005E80D1 /* CommentViewController.swift */,
 				F3AF7C5D2096AEEC005E80D1 /* CommentTableViewCell.swift */,
 				F3D9C1F72096BC650011C93D /* PostCommentsViewController.swift */,
+				F3D9C1F92096C2520011C93D /* GlobalConstants.swift */,
 			);
 			path = YoutubeComments;
 			sourceTree = "<group>";
@@ -418,6 +421,7 @@
 				F37DE4AF20943CEE00B0F25A /* YoutubeComments.xcdatamodeld in Sources */,
 				F3AF7C5E2096AEEC005E80D1 /* CommentTableViewCell.swift in Sources */,
 				F3AF7C5820960DE1005E80D1 /* GoogleUserInstance.swift in Sources */,
+				F3D9C1FA2096C2520011C93D /* GlobalConstants.swift in Sources */,
 				F3AF7C5C20961AA2005E80D1 /* CommentViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

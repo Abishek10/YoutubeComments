@@ -272,14 +272,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bu2-MM-cjE">
-                                <rect key="frame" x="20" y="108" width="335" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bu2-MM-cjE">
+                                <rect key="frame" x="93.999999999999986" y="108" width="187.66666666666663" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="C4p-sl-4IY">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="50"/>
+                                        <variation key="heightClass=regular-widthClass=regular" constant="60"/>
+                                    </constraint>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5vM-Pn-g2v">
-                                <rect key="frame" x="47.666666666666657" y="158" width="280" height="40"/>
+                                <rect key="frame" x="47.666666666666657" y="178" width="280" height="40"/>
                                 <color key="backgroundColor" red="0.3584749699" green="0.5560027957" blue="0.86279857159999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="azZ-Sa-SkC"/>
@@ -297,9 +303,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="5vM-Pn-g2v" firstAttribute="top" secondItem="bu2-MM-cjE" secondAttribute="bottom" constant="20" id="00L-P0-upg"/>
-                            <constraint firstItem="697-Cl-4sy" firstAttribute="trailing" secondItem="bu2-MM-cjE" secondAttribute="trailing" constant="20" id="FhX-7L-ijg"/>
-                            <constraint firstItem="bu2-MM-cjE" firstAttribute="leading" secondItem="697-Cl-4sy" secondAttribute="leading" constant="20" id="M7p-qH-ayb"/>
+                            <constraint firstItem="bu2-MM-cjE" firstAttribute="width" secondItem="cz2-ol-626" secondAttribute="width" multiplier="0.5" id="1eK-aM-ORw"/>
+                            <constraint firstItem="bu2-MM-cjE" firstAttribute="centerX" secondItem="697-Cl-4sy" secondAttribute="centerX" id="4aY-2F-Kra"/>
+                            <constraint firstItem="5vM-Pn-g2v" firstAttribute="top" secondItem="bu2-MM-cjE" secondAttribute="bottom" constant="20" id="Mj8-pH-YrD"/>
                             <constraint firstItem="5vM-Pn-g2v" firstAttribute="centerX" secondItem="697-Cl-4sy" secondAttribute="centerX" id="Ra0-MZ-nDb"/>
                             <constraint firstItem="bu2-MM-cjE" firstAttribute="top" secondItem="697-Cl-4sy" secondAttribute="top" constant="20" id="ujb-Wu-2OA"/>
                         </constraints>
