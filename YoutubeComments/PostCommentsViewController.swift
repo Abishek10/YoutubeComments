@@ -25,7 +25,7 @@ fileprivate struct Strings {
     static let SuccessTitle = "Success"
     static let ErrorTitle = "Error"
     static let SuccessMessage = "Successfully retrieved videos"
-    static let PostCommentsSuccessMessage = "Successfully Posted Comments"
+    static let PostCommentsSuccessMessage = "Successfully Posted Comment"
     static let OkTitle = "Ok"
 }
 
@@ -39,6 +39,9 @@ class PostCommentsViewController: UIViewController {
     
     var comments: [String] = [String]()
     var videos: [Video] = [Video]()
+    var timer : Timer?
+    var userIndex = 0
+    var videoIndex = 0
     
     let color = UIColor(red: 0.35, green: 0.55, blue: 0.86, alpha: 1.0)
     
@@ -96,6 +99,59 @@ class PostCommentsViewController: UIViewController {
             }
         }
     }
+
+    @objc func postComment() {
+        let x = OauthManager.sharedInstance.authenticatedUsers[userIndex]
+        let y = videos[videoIndex]
+        let part = "snippet"
+        let totalComments = comments.count
+
+        let urlString = GlobalConstants.URLS.comment + "?part=\(part)&key=\(GlobalConstants.API_KEY)&access_token=\(x.accessToken)"
+        let url = URL(string: urlString)!
+        
+        let videoId = y.videoId
+        let channelId = y.channelId
+        let random = Int(arc4random_uniform(UInt32(totalComments)))
+        let comment = comments[random]
+            
+        let parameters : Parameters = [
+            "snippet" : [
+                "channelId" : channelId,
+                "topLevelComment" : [
+                    "snippet" : [
+                        "textOriginal" : comment
+                    ]
+                ],
+                "videoId" : videoId
+            ]
+        ]
+            
+        Alamofire.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: nil).validate(statusCode: 200..<300).validate(contentType: ["application/json"]).responseJSON { response in
+                
+        switch response.result {
+            case .success( _):
+                self.showAlert(withTitle: Strings.SuccessTitle, withMessage: Strings.PostCommentsSuccessMessage)
+                break
+            case .failure(let error):
+                print(error)
+                self.showAlert(withTitle: Strings.ErrorTitle, withMessage: error.localizedDescription)
+                break
+            }
+        }
+
+        videoIndex += 1
+        if (videoIndex == videos.count) {
+            videoIndex = 0
+            userIndex += 1
+            
+            if (userIndex == OauthManager.sharedInstance.authenticatedUsers.count) {
+                userIndex = 0
+                timer?.invalidate()
+                UIApplication.shared.isNetworkActivityIndicatorVisible = false
+            }
+        }
+    }
+
     @IBAction func postComments(_ sender: Any) {
         if (comments.count == 0) {
             return
@@ -111,45 +167,9 @@ class PostCommentsViewController: UIViewController {
             return
         }
 
-        let part = "snippet"
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
 
-        
-        let videoId = videos[0].videoId
-        let channelId = videos[0].channelId
-        let comment = comments[0]
-        
-        
-        let urlString = GlobalConstants.URLS.comment + "?part=\(part)&key=\(GlobalConstants.API_KEY)&access_token=\(authenticatedUsers[0].accessToken)"
-        let url = URL(string: urlString)!
-
-        let parameters : Parameters = [
-            "snippet" : [
-                "channelId" : channelId,
-                "topLevelComment" : [
-                    "snippet" : [
-                        "textOriginal" : comment
-                    ]
-                ],
-                "videoId" : videoId
-            ]
-        ]
-        
-        
-        let request = Alamofire.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: nil).validate(statusCode: 200..<300).validate(contentType: ["application/json"]).responseJSON { response in
-            
-            switch response.result {
-            case .success(let value):
-                let json = JSON(value)
-                self.showAlert(withTitle: Strings.SuccessTitle, withMessage: Strings.PostCommentsSuccessMessage)
-                break
-            case .failure(let error):
-                print(error)
-                self.showAlert(withTitle: Strings.ErrorTitle, withMessage: error.localizedDescription)
-                break
-            }
-        }
-
-        debugPrint(request)
+        timer = Timer.scheduledTimer(timeInterval: 15, target: self, selector: #selector(postComment), userInfo: nil, repeats: true)
     }
 
     func parseJSON(json: JSON) {
@@ -181,6 +201,12 @@ class PostCommentsViewController: UIViewController {
 
         postCommentsButton.layer.cornerRadius = 5
         postCommentsButton.clipsToBounds = true
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        timer?.invalidate()
     }
     
     func showAlert(withTitle title: String, withMessage message: String) {
