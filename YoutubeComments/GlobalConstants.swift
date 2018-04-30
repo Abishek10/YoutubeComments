@@ -15,6 +15,7 @@ struct GlobalConstants {
 
     struct URLS {
         static let search = "https://www.googleapis.com/youtube/v3/search"
+        static let comment = "https://www.googleapis.com/youtube/v3/commentThreads"
     }
     
 }

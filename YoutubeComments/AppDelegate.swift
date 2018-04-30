@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        OauthManager.sharedInstance.configure(cliendId: "36040377269-0idmst320ogg6lhmfcprbgqbkgpt36qh.apps.googleusercontent.com", scope: ["email"], urlScheme: "com.googleusercontent.apps.36040377269-0idmst320ogg6lhmfcprbgqbkgpt36qh", serverCliendId: nil)
+        OauthManager.sharedInstance.configure(cliendId: "36040377269-0idmst320ogg6lhmfcprbgqbkgpt36qh.apps.googleusercontent.com", scope: ["email", "profile", "openid", "https://www.googleapis.com/auth/youtube.force-ssl", "https://www.googleapis.com/auth/youtubepartner"], urlScheme: "com.googleusercontent.apps.36040377269-0idmst320ogg6lhmfcprbgqbkgpt36qh", serverCliendId: nil)
         return true
     }
 

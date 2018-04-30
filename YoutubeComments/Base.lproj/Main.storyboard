@@ -272,7 +272,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bu2-MM-cjE">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Keyword" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bu2-MM-cjE">
                                 <rect key="frame" x="93.999999999999986" y="108" width="187.66666666666663" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="C4p-sl-4IY">
@@ -285,7 +285,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5vM-Pn-g2v">
-                                <rect key="frame" x="47.666666666666657" y="178" width="280" height="40"/>
+                                <rect key="frame" x="47.666666666666657" y="248" width="280" height="40"/>
                                 <color key="backgroundColor" red="0.3584749699" green="0.5560027957" blue="0.86279857159999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="azZ-Sa-SkC"/>
@@ -300,20 +300,54 @@
                                     <action selector="search:" destination="hra-xV-gVM" eventType="touchUpInside" id="tTR-z6-mDo"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Count" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MaH-F5-btC">
+                                <rect key="frame" x="93.333333333333329" y="178" width="187.33333333333337" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="3HP-dN-UPc">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="50"/>
+                                        <variation key="heightClass=regular-widthClass=regular" constant="60"/>
+                                    </constraint>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xnr-o8-AXj">
+                                <rect key="frame" x="47" y="308" width="280" height="40"/>
+                                <color key="backgroundColor" red="0.61568627450000002" green="0.01176470588" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="JQk-Wb-JQB"/>
+                                    <constraint firstAttribute="width" constant="280" id="llA-iA-VwU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="19"/>
+                                <state key="normal" title="Post Comments">
+                                    <color key="titleColor" red="0.95686274510000002" green="0.95686274510000002" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="postComments:" destination="hra-xV-gVM" eventType="touchUpInside" id="IZV-ZG-LHT"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="bu2-MM-cjE" firstAttribute="width" secondItem="cz2-ol-626" secondAttribute="width" multiplier="0.5" id="1eK-aM-ORw"/>
                             <constraint firstItem="bu2-MM-cjE" firstAttribute="centerX" secondItem="697-Cl-4sy" secondAttribute="centerX" id="4aY-2F-Kra"/>
-                            <constraint firstItem="5vM-Pn-g2v" firstAttribute="top" secondItem="bu2-MM-cjE" secondAttribute="bottom" constant="20" id="Mj8-pH-YrD"/>
+                            <constraint firstItem="xnr-o8-AXj" firstAttribute="centerX" secondItem="697-Cl-4sy" secondAttribute="centerX" id="8Y0-oW-qxM"/>
+                            <constraint firstItem="MaH-F5-btC" firstAttribute="width" secondItem="cz2-ol-626" secondAttribute="width" multiplier="0.5" id="JFw-iO-fNu"/>
+                            <constraint firstItem="5vM-Pn-g2v" firstAttribute="top" secondItem="MaH-F5-btC" secondAttribute="bottom" constant="20" id="JaB-AA-5fJ"/>
+                            <constraint firstItem="MaH-F5-btC" firstAttribute="top" secondItem="bu2-MM-cjE" secondAttribute="bottom" constant="20" id="Qmd-LS-0V0"/>
                             <constraint firstItem="5vM-Pn-g2v" firstAttribute="centerX" secondItem="697-Cl-4sy" secondAttribute="centerX" id="Ra0-MZ-nDb"/>
+                            <constraint firstItem="MaH-F5-btC" firstAttribute="centerX" secondItem="697-Cl-4sy" secondAttribute="centerX" id="W0r-Li-0yG"/>
+                            <constraint firstItem="xnr-o8-AXj" firstAttribute="top" secondItem="5vM-Pn-g2v" secondAttribute="bottom" constant="20" id="isq-2w-c1R"/>
                             <constraint firstItem="bu2-MM-cjE" firstAttribute="top" secondItem="697-Cl-4sy" secondAttribute="top" constant="20" id="ujb-Wu-2OA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="697-Cl-4sy"/>
                     </view>
                     <connections>
+                        <outlet property="postCommentsButton" destination="xnr-o8-AXj" id="5k7-A6-IDw"/>
                         <outlet property="searchButton" destination="5vM-Pn-g2v" id="mbK-4O-S8T"/>
                         <outlet property="searchText" destination="bu2-MM-cjE" id="G8J-Hm-1Em"/>
+                        <outlet property="videosCount" destination="MaH-F5-btC" id="Xfx-Pg-Fuh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G4K-dP-QlP" userLabel="First Responder" sceneMemberID="firstResponder"/>
