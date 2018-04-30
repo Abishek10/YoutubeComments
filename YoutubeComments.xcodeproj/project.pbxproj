@@ -24,6 +24,8 @@
 		F3AF7C5820960DE1005E80D1 /* GoogleUserInstance.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AF7C5720960DE1005E80D1 /* GoogleUserInstance.swift */; };
 		F3AF7C5A20960E07005E80D1 /* OauthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AF7C5920960E07005E80D1 /* OauthManager.swift */; };
 		F3AF7C5C20961AA2005E80D1 /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AF7C5B20961AA2005E80D1 /* CommentViewController.swift */; };
+		F3AF7C5E2096AEEC005E80D1 /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AF7C5D2096AEEC005E80D1 /* CommentTableViewCell.swift */; };
+		F3D9C1F82096BC650011C93D /* PostCommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D9C1F72096BC650011C93D /* PostCommentsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +74,8 @@
 		F3AF7C5720960DE1005E80D1 /* GoogleUserInstance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleUserInstance.swift; sourceTree = "<group>"; };
 		F3AF7C5920960E07005E80D1 /* OauthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OauthManager.swift; sourceTree = "<group>"; };
 		F3AF7C5B20961AA2005E80D1 /* CommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
+		F3AF7C5D2096AEEC005E80D1 /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
+		F3D9C1F72096BC650011C93D /* PostCommentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCommentsViewController.swift; sourceTree = "<group>"; };
 		FAB640CA9B4948EEEE9D6C87 /* Pods-YoutubeCommentsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YoutubeCommentsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YoutubeCommentsUITests/Pods-YoutubeCommentsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -164,6 +168,8 @@
 				F3AF7C5720960DE1005E80D1 /* GoogleUserInstance.swift */,
 				F3AF7C5920960E07005E80D1 /* OauthManager.swift */,
 				F3AF7C5B20961AA2005E80D1 /* CommentViewController.swift */,
+				F3AF7C5D2096AEEC005E80D1 /* CommentTableViewCell.swift */,
+				F3D9C1F72096BC650011C93D /* PostCommentsViewController.swift */,
 			);
 			path = YoutubeComments;
 			sourceTree = "<group>";
@@ -403,12 +409,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				F37DE4A920943CEE00B0F25A /* ViewController.swift in Sources */,
+				F3D9C1F82096BC650011C93D /* PostCommentsViewController.swift in Sources */,
 				F3AF7C5A20960E07005E80D1 /* OauthManager.swift in Sources */,
 				F326920820956B680079E900 /* InfoTableViewCell.swift in Sources */,
 				F3AF7C5420960D7B005E80D1 /* DynamicStorage.swift in Sources */,
 				F37DE4A720943CEE00B0F25A /* AppDelegate.swift in Sources */,
 				F3AF7C5620960DAA005E80D1 /* ExternalRequest.swift in Sources */,
 				F37DE4AF20943CEE00B0F25A /* YoutubeComments.xcdatamodeld in Sources */,
+				F3AF7C5E2096AEEC005E80D1 /* CommentTableViewCell.swift in Sources */,
 				F3AF7C5820960DE1005E80D1 /* GoogleUserInstance.swift in Sources */,
 				F3AF7C5C20961AA2005E80D1 /* CommentViewController.swift in Sources */,
 			);
