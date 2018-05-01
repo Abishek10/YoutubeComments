@@ -83,8 +83,11 @@ class CommentViewController: UIViewController, UITableViewDataSource, UITableVie
             return
         }
 
-        let commentText = comment.text
-        comments.append(commentText!)
+        let commentText = comment.text!
+        comments = commentText.components(separatedBy: "|")
+        for x in 0..<comments.count {
+            comments[x] = comments[x].trimmingCharacters(in: .whitespacesAndNewlines)
+        }
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

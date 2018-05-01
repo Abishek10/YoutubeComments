@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import Alamofire
+import DropDown
 import SwiftyJSON
 
 struct Video {
@@ -32,16 +33,21 @@ fileprivate struct Strings {
 class PostCommentsViewController: UIViewController {
     
     
+    @IBOutlet var timeInterval: UITextField!
+    @IBOutlet var orderBy: UIButton!
     @IBOutlet var postCommentsButton: UIButton!
     @IBOutlet var searchButton: UIButton!
     @IBOutlet var searchText: UITextField!
     @IBOutlet var videosCount: UITextField!
-    
+    @IBOutlet var commentLabel: UILabel!
+    @IBOutlet var videoLabel: UILabel!
+
     var comments: [String] = [String]()
     var videos: [Video] = [Video]()
     var timer : Timer?
     var userIndex = 0
     var videoIndex = 0
+    let dropDown = DropDown()
     
     let color = UIColor(red: 0.35, green: 0.55, blue: 0.86, alpha: 1.0)
     
@@ -50,6 +56,44 @@ class PostCommentsViewController: UIViewController {
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tap)
+
+        customizeDropDown(self)
+        setupDropDown()
+
+        dropDown.dismissMode = .onTap
+        dropDown.direction = .any
+    }
+
+
+    func customizeDropDown(_ sender: AnyObject) {
+        let appearance = DropDown.appearance()
+        
+        appearance.cellHeight = 60
+        appearance.backgroundColor = UIColor(white: 1, alpha: 1)
+        appearance.selectionBackgroundColor = UIColor(red: 0.6494, green: 0.8155, blue: 1.0, alpha: 0.2)
+        appearance.cornerRadius = 10
+        appearance.animationduration = 0.25
+        appearance.textColor = .darkGray
+    }
+    
+    @IBAction func orderVideos(_ sender: Any) {
+        dropDown.show()
+    }
+
+    func setupDropDown() {
+        dropDown.anchorView = orderBy
+        dropDown.dataSource = ["date",
+                               "relevance",
+                               ]
+        
+        dropDown.bottomOffset = CGPoint(x: 0, y: orderBy.bounds.height)
+        
+        // Action triggered on selection
+        dropDown.selectionAction = { [unowned self] (index, item) in
+            self.orderBy.setTitle(item, for: .normal)
+            self.orderBy.setTitleColor(UIColor.black, for: .normal)
+        }
+        
     }
     
     @objc func dismissKeyboard() {
@@ -60,8 +104,12 @@ class PostCommentsViewController: UIViewController {
         if (searchText.text?.count == 0) {
             return
         }
+
+        if (orderBy.titleLabel?.text == "Order By") {
+            return
+        }
         
-        var maxResults = 100
+        var maxResults = 50
         
         if (videosCount.text?.count != 0) {
             maxResults = Int(videosCount.text!)!
@@ -72,7 +120,7 @@ class PostCommentsViewController: UIViewController {
 
         let type = "video"
         let part = "snippet"
-        let order = "date"
+        let order =  orderBy.titleLabel?.text!
         
         let url = URL(string: GlobalConstants.URLS.search)!
         var get_data: [String: Any] = [String: Any]()
@@ -128,19 +176,21 @@ class PostCommentsViewController: UIViewController {
             
         Alamofire.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: nil).validate(statusCode: 200..<300).validate(contentType: ["application/json"]).responseJSON { response in
                 
-        switch response.result {
-            case .success( _):
-                self.showAlert(withTitle: Strings.SuccessTitle, withMessage: Strings.PostCommentsSuccessMessage)
+            switch response.result {
+            case .success(let value):
                 break
             case .failure(let error):
                 print(error)
                 self.showAlert(withTitle: Strings.ErrorTitle, withMessage: error.localizedDescription)
-                break
+                return
             }
         }
 
+        let commentNumber = Int(commentLabel.text!)!
+        commentLabel.text = String(commentNumber + 1)
+
         videoIndex += 1
-        if (videoIndex == videos.count) {
+        if (videoIndex == 20 || videoIndex == videos.count) {
             videoIndex = 0
             userIndex += 1
             
@@ -167,9 +217,19 @@ class PostCommentsViewController: UIViewController {
             return
         }
 
+        if (timeInterval.text?.count == 0) {
+            return
+        }
+
+        view.endEditing(true)
+
+        commentLabel.text = "0"
+
+        let interval = Int(timeInterval.text!)!
+
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
 
-        timer = Timer.scheduledTimer(timeInterval: 15, target: self, selector: #selector(postComment), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: TimeInterval(interval), target: self, selector: #selector(postComment), userInfo: nil, repeats: true)
     }
 
     func parseJSON(json: JSON) {
@@ -182,7 +242,7 @@ class PostCommentsViewController: UIViewController {
             videos.append(video)
         }
 
-        showAlert(withTitle: Strings.SuccessTitle, withMessage: Strings.SuccessMessage)
+        videoLabel.text = String(videos.count)
     }
     
     override func viewDidLayoutSubviews() {
@@ -190,6 +250,16 @@ class PostCommentsViewController: UIViewController {
         searchText.layer.borderColor = color.cgColor
         searchText.layer.cornerRadius = 5
         searchText.clipsToBounds = true
+
+        timeInterval.layer.borderColor = color.cgColor
+        timeInterval.layer.borderWidth = 1
+        timeInterval.layer.cornerRadius = 5
+        timeInterval.clipsToBounds = true
+
+        orderBy.layer.cornerRadius = 5
+        orderBy.clipsToBounds = true
+        orderBy.layer.borderColor = color.cgColor
+        orderBy.layer.borderWidth = 1
         
         searchButton.layer.cornerRadius = 5
         searchButton.clipsToBounds = true
