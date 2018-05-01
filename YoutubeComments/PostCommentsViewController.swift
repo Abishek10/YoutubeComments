@@ -193,12 +193,16 @@ class PostCommentsViewController: UIViewController {
         videoLabel.text = String(videoNumber - 1)
 
         videoIndex += 1
-        if (videoIndex == 20 || videoIndex == videos.count) {
-            videoIndex = 0
+        if (videoIndex % 20 == 0) {
             userIndex += 1
             
             if (userIndex == OauthManager.sharedInstance.authenticatedUsers.count) {
                 userIndex = 0
+            }
+
+            if (videoIndex == videos.count) {
+                userIndex = 0
+                videoIndex = 0
                 timer?.invalidate()
                 UIApplication.shared.isNetworkActivityIndicatorVisible = false
             }
