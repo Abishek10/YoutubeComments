@@ -189,6 +189,9 @@ class PostCommentsViewController: UIViewController {
         let commentNumber = Int(commentLabel.text!)!
         commentLabel.text = String(commentNumber + 1)
 
+        let videoNumber = Int(videoLabel.text!)!
+        videoLabel.text = String(videoNumber - 1)
+
         videoIndex += 1
         if (videoIndex == 20 || videoIndex == videos.count) {
             videoIndex = 0
